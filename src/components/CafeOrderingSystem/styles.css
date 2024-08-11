@@ -1,0 +1,9 @@
+.container {
+  gap: 90px;
+}
+
+.beverageWrapper {
+  flex-direction: column;
+  gap: 15px;
+  user-select: none !important;
+}
