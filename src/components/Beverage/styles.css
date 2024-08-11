@@ -1,18 +1,23 @@
 .beverage {
-  justify-content: space-between !important;
-  width: 140px;
-  padding: 3px 10px;
-  background-color: var(--secondaryBackground);
-  border: 1px solid var(--border);
-  border-bottom-width: 2px;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  cursor: pointer;
   position: relative;
+  justify-content: space-between !important;
+  min-width: 140px;
+  min-height: 26px;
+  background-color: var(--secondaryBackground);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  color: var(--primaryText);
+  cursor: pointer;
+  border: 2px solid var(--borderPrimary);
+  border-left: 1px solid var(--borderSecondary);
+  border-top: 1px solid var(--borderSecondary);
+  border-radius: 8px;
 }
 
-.beverage:hover {
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+.beverage:active {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  border-width: 2px 1px 1px 2px;
+  border-color: var(--borderPrimary), var(--borderSecondary),
+    var(--borderSecondary), var(--borderPrimary);
 }
 
 .counter {

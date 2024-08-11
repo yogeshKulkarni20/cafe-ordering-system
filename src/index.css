@@ -1,10 +1,11 @@
 :root {
   --appBackground: #fbfaf4;
   --secondaryBackground: #ffffff;
-  --countIndicator: #e3796d;
+  --countIndicator: #e2544b;
   --primaryText: #000106;
   --secondaryText: #000201;
-  --border: #202021;
+  --borderPrimary: #202021;
+  --borderSecondary: #828386;
   height: 100%;
   width: 100%;
 }
@@ -39,4 +40,5 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }

@@ -1,26 +1,30 @@
 import React, { type MouseEventHandler } from "react";
-import type { BeverageName, BeveragePrice } from "../types";
+import type { BeverageName, BeveragePrice, BeverageId } from "../types";
 import "./styles.css";
 
 type BeverageProps = {
   name: BeverageName;
   price: BeveragePrice;
   count: number;
-  onSelect: (name: BeverageName) => void;
+  id: BeverageId;
+  onSelect: () => void;
 };
 
-const Beverage = ({ name, price, count, onSelect }: BeverageProps) => {
+const Beverage = ({ name, price, count, onSelect, id }: BeverageProps) => {
   const onClickWrapper: MouseEventHandler = () => {
     if (typeof onSelect === "function") {
-      onSelect(name);
+      onSelect();
     }
   };
+
   return (
-    <div className="flexCenter beverage" onClick={onClickWrapper}>
+    <button id={id} className="flexCenter beverage" onClick={onClickWrapper}>
       <span>{name}</span>
-      <span>{price}</span>
-      <span className="flexCenter counter">{count}</span>
-    </div>
+      <span>{price} yen</span>
+      <div className="flexCenter counter" id={`${id}-count`}>
+        {count}
+      </div>
+    </button>
   );
 };
 

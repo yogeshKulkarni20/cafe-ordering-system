@@ -6,12 +6,16 @@ type InvoiceProps = {
   billingAmount: number;
 };
 
-const Invoice = ({ totalItems, billingAmount }: InvoiceProps) => {
+const Invoice = ({ totalItems = 0, billingAmount = 0 }: InvoiceProps) => {
   return (
     <div className="invoice">
       <div>Your bill</div>
-      <div>Items ordered: {totalItems}</div>
-      <div>Total Price: {billingAmount} yen</div>
+      <span className="flexCenter details" id="count">
+        <span>Items ordered:</span> {totalItems}
+      </span>
+      <span className="flexCenter details" id="price">
+        <span>Total Price:</span> {billingAmount} yen
+      </span>
     </div>
   );
 };
