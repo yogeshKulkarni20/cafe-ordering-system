@@ -1,0 +1,20 @@
+.invoice {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: var(--secondaryBackground);
+}
+
+.invoice > div {
+  margin: 2px 0px;
+}
+
+.invoice > div:first-child {
+  margin: 10px 0;
+  padding-bottom: 5px;
+  min-width: 160px;
+  border-bottom: 1px solid var(--border);
+}

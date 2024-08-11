@@ -1,8 +1,8 @@
 import React from "react";
-import "./App.css";
+import CafeOrderingWrapper from "./components/CafeOrderingSystem/CafeOrderingWrapper";
 
 function App() {
-  return <div className="App">Basic Project Setup</div>;
+  return <CafeOrderingWrapper />;
 }
 
 export default App;
