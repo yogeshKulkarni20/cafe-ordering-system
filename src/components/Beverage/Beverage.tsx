@@ -18,10 +18,19 @@ const Beverage = ({ name, price, count, onSelect, id }: BeverageProps) => {
   };
 
   return (
-    <button id={id} className="flexCenter beverage" onClick={onClickWrapper}>
+    <button
+      data-testid={id}
+      id={id}
+      className="flexCenter beverage"
+      onClick={onClickWrapper}
+    >
       <span>{name}</span>
       <span>{price} yen</span>
-      <div className="flexCenter counter" id={`${id}-count`}>
+      <div
+        className="flexCenter counter"
+        id={`${id}-count`}
+        data-testid={`${id}-count`}
+      >
         {count}
       </div>
     </button>
