@@ -19,6 +19,7 @@ const Beverage = ({ name, price, count, onSelect }: BeverageProps) => {
     <div className="flexCenter beverage" onClick={onClickWrapper}>
       <span>{name}</span>
       <span>{price}</span>
+      <span className="flexCenter counter">{count}</span>
     </div>
   );
 };
